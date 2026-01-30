@@ -1,9 +1,7 @@
 ﻿using Database;
 using Microsoft.EntityFrameworkCore;
 using System.Net.NetworkInformation;
-using WeatherStation;
-
-namespace WeatherStation;
+namespace Database;
 
 public class Program
 {
