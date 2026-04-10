@@ -1,7 +1,5 @@
 ﻿using Database;
-using Microsoft.EntityFrameworkCore;
-using System.Net.NetworkInformation;
-namespace Database;
+using Repository;
 
 public class Program
 {
@@ -11,6 +9,12 @@ public class Program
         using (var myContext = new WeatherStationContext())
         {
             myContext.Database.EnsureCreated();
+
+            IUserRepository user = new UserRepository(myContext);
+            var temp = user.GetUser(1);
+
+            Console.WriteLine(temp.Name);
         }
+        
     }
 }
