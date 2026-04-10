@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Database
+{
+    public class Log
+    {
+        public int Id { get; set; }
+        public string Message { get; set; }
+
+        public Log(int id, string message)
+        {
+            Id=id;
+            Message=message;
+        }
+    }
+}
